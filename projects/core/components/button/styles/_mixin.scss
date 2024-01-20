@@ -1,0 +1,41 @@
+@import './hierarchical';
+
+@mixin setupPalette($type) {
+  @each $hue in map-keys($button-appearance-vars) {
+    $values: map-get($button-appearance-vars, $hue);
+
+    &[data-appearance = "#{$hue}"] {
+      @if ($type == 'outlined') {
+        @include _get-outlined-config($values);
+      } @else if ($type == 'fab') {
+        @include _get-fab-config($values);
+      } @else if ($type == 'icon') {
+        @include _get-icon-config($values);
+      } @else {
+        @include _get-default-config($values);
+      }
+    }
+  }
+}
+
+@mixin _get-outlined-config($values) {
+  background: transparent;
+  color: var(--#{map-get($values, 'background')});
+  border: 1px solid currentColor;
+}
+
+@mixin _get-fab-config($values) {
+  background-color: var(--#{map-get($values, 'background')});
+  color: var(--#{map-get($values, 'color')});
+}
+
+@mixin _get-icon-config($values) {
+  background: transparent;
+  color: var(--#{map-get($values, 'background')});
+}
+
+@mixin _get-default-config($values) {
+  @each $attribute in map-keys($values) {
+    #{$attribute}: var(--#{map-get($values, $attribute)});
+  }
+}

@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@myplugs/core": ["projects/core/index.ts"],
       "@myplugs/core/*": ["projects/core/*"]
     }
   },

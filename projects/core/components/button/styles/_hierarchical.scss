@@ -1,0 +1,34 @@
+$button-appearance-vars: (
+  primary: (
+    color: white,
+    background: color-primary,
+  ),
+  primary-dark: (
+    color: white,
+    background: color-primary-dark,
+  ),
+  secondary: (
+    color: white,
+    background: color-secondary,
+  ),
+  secondary-light: (
+    color: color-secondary,
+    background: color-secondary-light,
+  ),
+  secondary-lighter: (
+    color: color-secondary,
+    background: color-secondary-lighter,
+  ),
+);
+
+$default-button-type-styles: (
+  outlined: (
+    color: red,
+  ),
+  raised: (
+    color: green,
+  ),
+  fab: (
+    color: blue,
+  )
+)
