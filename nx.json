@@ -58,5 +58,9 @@
       "style": "scss"
     }
   },
-  "nxCloudAccessToken": "Mjc1YzJjZmQtNDVmZC00MTUwLWJjNDAtMGFhZjY3ZWUzZjBmfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "Mjc1YzJjZmQtNDVmZC00MTUwLWJjNDAtMGFhZjY3ZWUzZjBmfHJlYWQtd3JpdGU=",
+  "workspaceLayout": {
+    "libsDir": "projects",
+    "appsDir": "projects"
+  }
 }

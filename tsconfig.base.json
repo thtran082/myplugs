@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@myplugs/core": ["projects/core/index.ts"],
+      "@myplugs/core/*": ["projects/core/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
