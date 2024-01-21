@@ -24,10 +24,12 @@ export class CoreButtonComponent implements OnInit {
   private readonly buttonConfig = injectButton();
 
   @HostBinding('disabled')
-  @Input() @InputBoolean() disabled = false;
+  @InputBoolean()
+  @Input() disabled = false;
 
   @HostBinding('attr.data-with-shadow')
-  @Input() @InputBoolean() withShadow = this.buttonConfig.shadow || false;
+  @InputBoolean()
+  @Input() withShadow = this.buttonConfig.shadow || false;
 
   @HostBinding('attr.data-appearance')
   @Input() appearance: ButtonAppearance = 'default';

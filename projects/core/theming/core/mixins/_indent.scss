@@ -1,8 +1,10 @@
 @use '../variables/indent';
 
 @mixin setup() {
-  @each $key, $value in indent.$indents {
-    --space-#{$key}: #{$value};
+  :root {
+    @each $key, $value in indent.$indents {
+      --space-#{$key}: #{$value};
+    }
   }
 }
 

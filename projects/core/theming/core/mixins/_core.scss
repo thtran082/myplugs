@@ -1,0 +1,11 @@
+@use "../variables/core";
+
+@mixin setup() {
+  :root {
+    @each $styleName, $value in core.$core {
+      @each $key, $val in $value {
+        --#{$styleName}#{if($key == '', '', '-')}#{$key}: #{$val};
+      }
+    }
+  }
+}

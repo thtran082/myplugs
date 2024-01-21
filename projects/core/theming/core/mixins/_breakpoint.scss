@@ -1,0 +1,11 @@
+@use "../variables/breakpoint";
+
+@mixin setup() {
+  :root {
+    @each $key, $value in breakpoint.$breakpoint {
+      --screen-#{$key}: #{$value};
+      --screen-#{$key}-min: #{$value - 1}px;
+      --screen-#{$key}-max: #{$value + 1}px;
+    }
+  }
+}

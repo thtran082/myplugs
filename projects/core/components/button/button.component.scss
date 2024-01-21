@@ -4,7 +4,7 @@
   $button-element-shadow: drop-shadow(0px 1px 5px rgba(20, 20, 20, 0.2));
   $fab-button-disabled: #747D89B2;
 
-  color: red !important;
+  @include _mixin.reset();
 
   .icon {
     font-size: 1.15em;
@@ -20,7 +20,7 @@
   }
 
   &.xo-raised-button {
-    //@include _mixin.setupPalette('raised');
+    @include _mixin.setupPalette('raised');
 
     font-size: var(--text-sm-size);
     line-height: var(--text-sm-line-height);
@@ -42,8 +42,7 @@
     border-radius: var(--border-radius);
     line-height: var(--text-sm-line-height);
 
-    padding: var(--space-xs);
-  ;
+    padding: var(--space-xs);;
   }
 
   &.xo-fab-icon {
@@ -87,7 +86,8 @@
     }
   }
 
-  &:is(.xo-raised-button, .xo-fab-icon)[data-with-shadow="true"] {
+  &.xo-raised-button[data-with-shadow="true"],
+  &.xo-fab-icon[data-with-shadow="true"] {
     box-shadow: var(--box-shadow);
   }
 

@@ -1,0 +1,17 @@
+@use "../variables/palette";
+
+@mixin setup() {
+  :root {
+    @each $color, $value in palette.$palette {
+      @each $name, $hue in $value {
+        @if ($hue == null) {
+          --color-#{$color}: #{$name};
+          --#{$color}: #{$name};
+        }
+        @else {
+          --#{$color}-#{$name}: #{$hue};
+        }
+      }
+    }
+  }
+}

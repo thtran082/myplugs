@@ -1,0 +1,20 @@
+@use "core/mixins/indent";
+@use "core/mixins/typography";
+@use "core/mixins/palette";
+@use "core/mixins/breakpoint";
+@use "core/mixins/core";
+@use "theming";
+
+@mixin core() {
+  @include indent.setup();
+  @include typography.setup();
+  @include palette.setup();
+  @include breakpoint.setup();
+  @include core.setup();
+}
+
+@include core();
+
+@mixin theme($palette) {
+    @include theming.define-palette($palette);
+}

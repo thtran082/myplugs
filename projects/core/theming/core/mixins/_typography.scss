@@ -1,8 +1,10 @@
 @use "../variables/typography";
 
 @mixin setup() {
-  @include _font-config();
-  @include _icon-config();
+  :root {
+    @include _font-config();
+    @include _icon-config();
+  }
 }
 
 @mixin _font-config() {
