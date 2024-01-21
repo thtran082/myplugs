@@ -1,0 +1,33 @@
+@use "../variables/typography";
+
+@mixin setup() {
+  @include _font-config();
+  @include _icon-config();
+}
+
+@mixin _font-config() {
+  @each $type, $value in typography.$typography {
+    @each $key, $val in $value {
+      $typeName: '-' + $type;
+      @if ($typeName == '-') {
+        $typeName: '';
+      }
+      @if $key == 'size' {
+        --text#{$typeName}-size: #{$val};
+      }
+      @if $key == 'line-height' {
+      --text#{$typeName}-line-height: #{$val}
+    }
+    }
+  }
+}
+
+@mixin _icon-config() {
+  @each $key, $value in typography.$icon {
+    $typeName: '-' + $key;
+    @if ($typeName == '-') {
+      $typeName: '';
+    }
+    --icon#{$typeName}-size: #{$value}
+  }
+}

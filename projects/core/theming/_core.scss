@@ -1,0 +1,8 @@
+@use "core/mixins/indent";
+@use "core/mixins/typography";
+
+@mixin core() {
+  @include indent.setup();
+  @include typography.setup();
+}
+

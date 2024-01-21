@@ -13,8 +13,7 @@ function createButtonToken() {
   });
 
   const injectButton = (withConfig: InjectOptions = {}) => {
-    const token = inject(BUTTON_CONFIG, withConfig)!;
-    return token;
+    return inject(BUTTON_CONFIG, withConfig)!;
   }
 
   return { provideButton, injectButton };
