@@ -70,7 +70,7 @@
   &.xo-icon-button {
     @include _mixin.setupPalette('icon');
 
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     align-items: center;
     gap: var(--space-xxs);
@@ -86,8 +86,7 @@
     }
   }
 
-  &.xo-raised-button[data-with-shadow="true"],
-  &.xo-fab-icon[data-with-shadow="true"] {
+  &[data-with-shadow="true"] {
     box-shadow: var(--box-shadow);
   }
 

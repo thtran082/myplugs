@@ -4,6 +4,7 @@
 @use "core/mixins/breakpoint";
 @use "core/mixins/core";
 @use "theming";
+@use "prebuilt/theplug";
 
 @mixin core() {
   @include indent.setup();
@@ -13,8 +14,8 @@
   @include core.setup();
 }
 
-@include core();
-
-@mixin theme($palette) {
+@mixin theme($palette: theplug.$palette) {
     @include theming.define-palette($palette);
 }
+
+@include core();

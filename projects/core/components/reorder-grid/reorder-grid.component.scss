@@ -1,0 +1,30 @@
+:host {
+  .reorder-container {
+    display: grid;
+    grid-template-columns: repeat(var(--rows), 1fr);
+    gap: var(--space-md);
+
+    .item {
+      position: relative;
+    }
+  }
+}
+
+.xo-drag-handle {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  padding: var(--space-xxs);
+  cursor: move;
+
+  color: white;
+  background: var(--color-secondary-lighter);
+  font-size: var(--text-md-size);
+  line-height: 1;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.cdk-drag-placeholder {
+  opacity: .3;
+}

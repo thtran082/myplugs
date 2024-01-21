@@ -20,15 +20,3 @@ $button-appearance-vars: (
     background: color-secondary-lighter,
   ),
 );
-
-$default-button-type-styles: (
-  outlined: (
-    color: red,
-  ),
-  raised: (
-    color: green,
-  ),
-  fab: (
-    color: blue,
-  )
-)

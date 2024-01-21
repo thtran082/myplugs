@@ -9,4 +9,28 @@ $core: (
     '': 0 1px 5px rgba(20, 20, 20, .2),
     light: 0 1px 5px rgba(20, 20, 20, .1),
   ),
+  form: (
+    element-border: var(--color-border),
+    element-border-focus: var(--color-primary),
+    element-border-error: var(--color-error),
+    element-text-error: var(--color-error),
+    element-bg: var(--white),
+    element-disabled: #f1f2f3,
+    text-placeholder: var(--gray-4),
+    remain-text: #bbc3cd,
+    label-text: var(--color-secondary),
+    input-text: var(--color-primary-dark),
+  ),
+  message-style: (
+    1: #ffffff,
+    2: #e7e7e7,
+    3: #cff6e9,
+    4: #c3eaff,
+    5: #d4d3fe,
+    6: #f4d3fe,
+    7: #f9edd1,
+    8: #dbf0d2,
+    9: #fac9c9,
+    10: #f9f9c1,
+  )
 )

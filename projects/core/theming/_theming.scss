@@ -1,6 +1,8 @@
+@use "./prebuilt/theplug";
+
 /// Creates a map of hues to colors for a theme
 /// @param {Map} $base-palette Map of hue keys to color values for the basis for this palette.
-@mixin define-palette($base-palette) {
+@mixin define-palette($base-palette: theplug.$palette) {
   :root {
     @each $hue, $color in $base-palette {
       --color-#{$hue}: #{$color};
