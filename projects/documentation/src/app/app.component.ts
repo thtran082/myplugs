@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CoreButtonComponent } from '@myplugs/core/components';
+import { CoreButtonComponent } from '@myplugs/core/components/button';
 import {
   CoreDragHandleDirective,
   CoreReorderGridComponent,

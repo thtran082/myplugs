@@ -1,0 +1,35 @@
+$palette: (
+  primary: indigo,
+  primary-dark: #1a237e,
+  primary-light: #536dfe,
+  secondary: #f50057,
+  secondary-light: orange,
+  secondary-lighter: #ff80ab,
+);
+
+$font: (
+  primary: "'Montserrat', sans-serif",
+  secondary: "'Lato', sans-serif",
+);
+
+@mixin setup-fonts() {
+  @font-face {
+    font-family: 'Montserrat';
+    src: url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.woff2) format('woff2'),
+    url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.woff) format('woff'),
+    url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.woff2) format('woff2'),
+    url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.woff) format('woff'),
+    url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+
+@include setup-fonts();

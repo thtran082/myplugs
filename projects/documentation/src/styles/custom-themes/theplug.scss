@@ -1,0 +1,3 @@
+@use "projects/core";
+
+@include core.theme(core.$theplug-palette, core.$theplug-font);

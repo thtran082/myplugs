@@ -1,9 +1,3 @@
 @use "projects/core";
 
-$palette: (
-  primary: #00adef,
-  primary-light: rgba(0, 173, 239, 0.05),
-  primary-dark: #141414,
-);
-
-@include core.theme($palette, core.$clorox-font);
+@include core.theme(core.$clorox-palette, core.$clorox-font);

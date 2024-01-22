@@ -31,6 +31,11 @@
             "inject": false,
             "input": "projects/documentation/src/styles/custom-themes/indigo-pink.scss",
             "bundleName": "indigo-pink"
+          },
+          {
+            "inject": false,
+            "input": "projects/documentation/src/styles/custom-themes/theplug.scss",
+            "bundleName": "theplug"
           }
         ],
         "scripts": []

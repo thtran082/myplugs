@@ -2,7 +2,6 @@
 @use "projects/core";
 
 @include core.core();
-@include core.theme();
 
 body {
   margin: 0;

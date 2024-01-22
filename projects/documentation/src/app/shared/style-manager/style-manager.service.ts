@@ -39,7 +39,8 @@ function createStyleManager() {
   }
 
   const injectStyleManager = (withConfig: InjectOptions = {}) => {
-    return inject(StyleManagerService, withConfig)!;
+    const { removeStyle, setStyle } = inject(StyleManagerService, withConfig)!;
+    return { removeStyle, setStyle };
   }
 
   return { injectStyleManager };
