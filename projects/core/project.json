@@ -1,14 +1,40 @@
 {
   "name": "core",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "projects/core/src",
+  "sourceRoot": "projects/core",
   "prefix": "xo",
   "tags": [],
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": [
+        "{workspaceRoot}/dist/{projectRoot}"
+      ],
+      "options": {
+        "project": "projects/core/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "projects/core/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "projects/core/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "publish": {
+      "command": "npm publish",
+      "options": {
+        "cwd": "dist/core"
+      }
     }
   }
 }

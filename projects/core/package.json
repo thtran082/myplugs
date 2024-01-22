@@ -1,0 +1,27 @@
+{
+  "name": "myplugs",
+  "description": "Utilities library for Angular",
+  "version": "0.2.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": ">=16.0.0",
+    "@angular/core": ">=16.0.0",
+    "@angular/cdk": ">=16.0.0",
+    "@use-gesture/vanilla": "^10.0.0",
+    "rxjs": "^6.0.0 || ^7.0.0"
+  },
+  "dependencies": {
+    "@nx/devkit": "^17.0.0",
+    "nx": "^17.0.0",
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "exports": {
+    "./theming/core": {
+      "sass": "./theming/core.scss"
+    }
+  }
+}

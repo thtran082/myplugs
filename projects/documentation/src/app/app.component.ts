@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CoreButtonComponent } from '@myplugs/core/components/button';
+import { CoreButtonComponent } from 'myplugs/components';
 import {
   CoreDragHandleDirective,
   CoreReorderGridComponent,
   CoreReorderItemDirective,
-} from '@myplugs/core/components/reorder-grid';
+} from 'myplugs/components';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @Component({
