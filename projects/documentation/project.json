@@ -20,7 +20,14 @@
           "projects/documentation/src/favicon.ico",
           "projects/documentation/src/assets"
         ],
-        "styles": ["projects/documentation/src/styles.scss"],
+        "styles": [
+          "projects/documentation/src/styles.scss",
+          {
+            "inject": false,
+            "input": "projects/documentation/src/clorox.scss",
+            "bundleName": "clorox"
+          }
+        ],
         "scripts": []
       },
       "configurations": {
@@ -77,6 +84,53 @@
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "projects/documentation/jest.config.ts"
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "projects/documentation/.storybook",
+        "browserTarget": "documentation:build",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/documentation",
+        "configDir": "projects/documentation/.storybook",
+        "browserTarget": "documentation:build",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c projects/documentation/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "documentation:build-storybook",
+        "staticFilePath": "dist/storybook/documentation"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "documentation:build-storybook:ci"
+        }
       }
     }
   }

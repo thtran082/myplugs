@@ -1,0 +1,9 @@
+@use "projects/core";
+
+$palette: (
+  primary: indigo,
+  secondary: pink,
+  secondary-light: orange,
+);
+
+@include core.theme($palette)

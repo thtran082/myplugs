@@ -12,9 +12,11 @@
   >
     <div class="item" cdkDrag>
       <ng-template *ngTemplateOutlet="reorderItemTmpl; context: { $implicit: item, index: index }"/>
-      <button xo-raised-button appearance="secondary" withShadow cdkDragHandle class="xo-drag-handle">
-        +
-      </button>
+      <ng-container *ngIf="dragHandleTmpl">
+        <div cdkDragHandle>
+          <ng-template [ngTemplateOutlet]="dragHandleTmpl"></ng-template>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

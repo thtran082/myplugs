@@ -13,3 +13,9 @@ export class CoreReorderItemDirective<TItem> {
   }
 }
 
+@Directive({
+  selector: 'ng-template[xoDragHandle]',
+  standalone: true,
+})
+export class CoreDragHandleDirective {
+}

@@ -6,7 +6,7 @@ import {
   DragRef,
   moveItemInArray,
 } from '@angular/cdk/drag-drop';
-import { NgForOf, NgTemplateOutlet } from '@angular/common';
+import { NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -22,7 +22,7 @@ import {
 import { XoSafeAny } from '../../types';
 import { InputBoolean, InputNumber } from '../../utils';
 import { CoreButtonComponent } from '../button';
-import { CoreReorderItemDirective } from './reorder-item.directive';
+import { CoreDragHandleDirective, CoreReorderItemDirective } from './reorder-item.directive';
 
 /**
  * Drag and drop with grid layout
@@ -36,6 +36,7 @@ import { CoreReorderItemDirective } from './reorder-item.directive';
   styleUrls: ['./reorder-grid.component.scss'],
   imports: [
     NgForOf,
+    NgIf,
     NgTemplateOutlet,
     CdkDropListGroup,
     CdkDropList,
@@ -50,6 +51,7 @@ export class CoreReorderGridComponent<T> implements AfterViewInit {
   @ViewChild(CdkDropListGroup) listGroup!: CdkDropListGroup<CdkDropList>;
   @ViewChild(CdkDropList) placeholder!: CdkDropList;
   @ContentChild(CoreReorderItemDirective, { read: TemplateRef }) reorderItemTmpl!: TemplateRef<XoSafeAny>;
+  @ContentChild(CoreDragHandleDirective, { read: TemplateRef }) dragHandleTmpl!: TemplateRef<XoSafeAny>;
 
   @Input() items: T[] = [];
 

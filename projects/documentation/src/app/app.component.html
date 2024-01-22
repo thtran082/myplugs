@@ -1,6 +1,10 @@
+<header>
+  <button xo-raised-button appearance="primary" (click)="onUpdate()"> update theme </button>
+</header>
+
 <h3>BUTTONS</h3>
 
-<div>
+<div class="btn-container">
   <h5>raised / raised-button appearance=</h5>
   <button xo-raised-button appearance="primary" withShadow disabled>disabled</button>
   <button xo-raised-button appearance="primary" withShadow>primary</button>
@@ -9,7 +13,7 @@
   <button xo-raised-button appearance="secondary-lighter" withShadow>secondary-lighter</button>
   <button xo-raised-button appearance="primary-dark" withShadow>primary-dark</button>
 </div>
-<div>
+<div class="btn-container">
   <h5>xo-outlined-button</h5>
   <button xo-outlined-button appearance="primary-dark" withShadow disabled>disabled</button>
   <button xo-outlined-button appearance="primary" withShadow>primary</button>
@@ -18,7 +22,7 @@
   <button xo-outlined-button appearance="secondary-lighter" withShadow>secondary-lighter</button>
   <button xo-outlined-button appearance="primary-dark" withShadow>primary-dark</button>
 </div>
-<div>
+<div class="btn-container">
   <h5>xo-fab-icon</h5>
   <button xo-fab-icon appearance="primary-dark" withShadow disabled>1</button>
   <button xo-fab-icon appearance="primary" withShadow>2</button>
@@ -56,9 +60,16 @@
 </div>
 
 <h3>REORDER</h3>
-<code>value: {{ items | json }}</code>
 <xo-reorder-grid [items]="items">
   <ng-template xoReorderItem let-item let-index="index">
-    <div class="media">frame {{item}}</div>
+    <div class="media">
+      <img [src]="item.download_url" alt="" width="100%" height="100%">
+    </div>
+
+  </ng-template>
+  <ng-template xoDragHandle>
+    <button class="drag">
+      drag me
+    </button>
   </ng-template>
 </xo-reorder-grid>

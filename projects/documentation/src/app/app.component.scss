@@ -1,8 +1,37 @@
-.icon button {
-  padding: var(--space-sm);
-}
+:host {
+  h5 {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--space-xs);
+  }
 
-.media {
-  height: 200px;
-  border: 1px dashed var(--color-primary);
+  .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    .icon button {
+      padding: var(--space-sm);
+    }
+  }
+
+  .media {
+    height: 200px;
+    border: 1px dashed var(--color-primary);
+    padding: var(--space-xxs);
+    border-radius: var(--border-radius-xs);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl-size);
+    line-height: var(--text-xl-line-height);
+
+  }
+
+  .drag {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+  }
+
 }
