@@ -24,8 +24,13 @@
           "projects/documentation/src/styles.scss",
           {
             "inject": false,
-            "input": "projects/documentation/src/clorox.scss",
+            "input": "projects/documentation/src/styles/custom-themes/clorox.scss",
             "bundleName": "clorox"
+          },
+          {
+            "inject": false,
+            "input": "projects/documentation/src/styles/custom-themes/indigo-pink.scss",
+            "bundleName": "indigo-pink"
           }
         ],
         "scripts": []

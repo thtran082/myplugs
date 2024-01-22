@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--color-primary);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-secondary-light);
+
+  box-shadow: var(--box-shadow);
+
+  .theme-picker {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+}

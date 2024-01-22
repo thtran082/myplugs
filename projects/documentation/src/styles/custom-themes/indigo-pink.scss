@@ -1,0 +1,12 @@
+@use "projects/core";
+
+$palette: (
+  primary-light: #536dfe,
+  primary: #3d5afe,
+  primary-dark: #1a237e,
+  secondary-lighter: #ff80ab,
+  secondary-light: #ff4081,
+  secondary: #f50057,
+);
+
+@include core.theme($palette)

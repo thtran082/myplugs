@@ -6,6 +6,7 @@ import {
   CoreReorderGridComponent,
   CoreReorderItemDirective,
 } from '@myplugs/core/components/reorder-grid';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @Component({
   selector: 'myplugs-root',
@@ -19,6 +20,7 @@ import {
     CoreReorderGridComponent,
     CoreReorderItemDirective,
     CoreDragHandleDirective,
+    NavbarComponent,
   ],
 })
 export class AppComponent {

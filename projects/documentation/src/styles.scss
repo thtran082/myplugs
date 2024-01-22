@@ -2,3 +2,9 @@
 @use "projects/core";
 
 @include core.theme();
+
+body {
+  margin: 0;
+
+  font-family: sans-serif;
+}
