@@ -9,6 +9,21 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
+    },
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "outputs": ["{workspaceRoot}/dist/core"],
+      "options": {
+        "tsConfig": "tsconfig.build.json",
+        "project": "projects/core/ng-package.json"
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "params": "forward",
+          "dependencies": true
+        }
+      ]
     }
   }
 }

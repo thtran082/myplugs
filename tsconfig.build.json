@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "exclude": ["**/*.spec.ts"],
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/lib",
+    "declaration": true,
+    "sourceMap": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "paths": {
+      "@myplugs/core/*": ["./dist/core/*"],
+      "@myplugs/core": ["./dist/core/index"]
+    }
+  }
+}

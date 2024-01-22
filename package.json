@@ -2,6 +2,7 @@
   "name": "@myplugs/source",
   "version": "0.0.0",
   "license": "MIT",
+  "description": "Theming and core for plug systems",
   "scripts": {
     "start": "nx s",
     "storybook": "nx run documentation:storybook"

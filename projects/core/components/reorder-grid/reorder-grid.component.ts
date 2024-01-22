@@ -19,10 +19,10 @@ import {
   TemplateRef,
   ViewChild,
 } from '@angular/core';
-import { XoSafeAny } from '../../types';
-import { InputBoolean, InputNumber } from '../../utils';
-import { CoreButtonComponent } from '../button';
-import { CoreDragHandleDirective, CoreReorderItemDirective } from './reorder-item.directive';
+import { XoSafeAny } from '@myplugs/core/types';
+import { InputNumber } from '@myplugs/core/utils';
+import { CoreButtonComponent } from '@myplugs/core/components/button';
+import { CoreDragHandleDirective, CoreReorderItemDirective } from '../reorder-grid';
 
 /**
  * Drag and drop with grid layout

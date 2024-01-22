@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, inject, In
 import { CLASSES_MAP_PAIR } from './button.const';
 import { injectButton } from './button.factory';
 import { ButtonAppearance } from './button.type';
-import { InputBoolean } from '../../utils';
+import { InputBoolean } from '@myplugs/core/utils';
 
 @Component({
   selector: `

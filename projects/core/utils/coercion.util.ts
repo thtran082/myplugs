@@ -1,5 +1,5 @@
 import { coerceNumberProperty, coerceBooleanProperty } from '@angular/cdk/coercion';
-import { XoSafeAny } from '../types';
+import { XoSafeAny } from '@myplugs/core/types';
 
 function propDecoratorFactory<T, K>(name: string, fallback: (t: T) => K): PropertyDecorator {
   // eslint-disable-next-line @typescript-eslint/ban-types
