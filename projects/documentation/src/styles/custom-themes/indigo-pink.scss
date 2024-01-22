@@ -1,12 +1,19 @@
 @use "projects/core";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Sevillana&display=swap');
 
 $palette: (
-  primary-light: #536dfe,
-  primary: #3d5afe,
+  primary: indigo,
   primary-dark: #1a237e,
-  secondary-lighter: #ff80ab,
-  secondary-light: #ff4081,
+  primary-light: #536dfe,
   secondary: #f50057,
+  secondary-light: orange,
+  secondary-lighter: #ff80ab,
 );
 
-@include core.theme($palette)
+$font: (
+  primary: "JetBrains Mono",
+  secondary: "Sevillana",
+);
+
+@include core.theme($palette, $font);
+

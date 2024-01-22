@@ -18,7 +18,7 @@
 
   .media {
     height: 200px;
-    border: 1px dashed var(--color-primary);
+    border: 2px dashed var(--color-primary);
     padding: var(--space-xxs);
     border-radius: var(--border-radius-xs);
 
@@ -28,6 +28,9 @@
     font-size: var(--text-xl-size);
     line-height: var(--text-xl-line-height);
 
+    span {
+      color: var(--color-success);
+    }
   }
 
   .drag {

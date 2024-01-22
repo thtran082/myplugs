@@ -2,9 +2,35 @@ $palette: (
   primary: #00adef,
   primary-light: rgba(0, 173, 239, 0.05), // use chroma.js
   primary-dark: #141414,
-
   secondary: #747d89,
   secondary-light: #dfe4ee,
   secondary-lighter: #f5f7fa,
   secondary-dark: #747d89,
+
+  success: var(--color-green),
+  error: var(--color-red),
 );
+
+$font: (
+  primary: "'Larsseit Alt', sans-serif",
+  secondary: "'Larsseit Alt', sans-serif",
+);
+
+@mixin setup-fonts() {
+  @font-face {
+    font-family: 'Larsseit Alt';
+    src: url(https://content.xomad.com/static_app2/permanent/font/LarsseitAltBold.woff2) format("woff2"),
+    url(https://content.xomad.com/static_app2/permanent/font/LarsseitAltBold.woff) format("woff");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Larsseit Alt';
+    src: url(https://content.xomad.com/static_app2/permanent/font/LarsseitAlt-Regular.otf) format("embedded-opentype"),
+    url(https://content.xomad.com/static_app2/permanent/font/LarsseitAltRegular.woff2) format("woff2"),
+    url(https://content.xomad.com/static_app2/permanent/font/LarsseitAltRegular.woff) format("woff");
+    font-weight: 400;
+  }
+}
+
+@include setup-fonts();

@@ -61,7 +61,7 @@
 <xo-reorder-grid [items]="items">
   <ng-template xoReorderItem let-item let-index="index">
     <div class="media">
-      <img [src]="item.download_url" alt="" width="100%" height="100%">
+      <span>{{ item.id }}</span>
     </div>
 
   </ng-template>

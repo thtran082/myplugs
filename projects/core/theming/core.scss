@@ -14,8 +14,7 @@
   @include core.setup();
 }
 
-@mixin theme($palette: theplug.$palette) {
-    @include theming.define-palette($palette);
+@mixin theme($palette: theplug.$palette, $font: theplug.$font) {
+  @include theming.define-palette($palette);
+  @include theming.define-font($font);
 }
-
-@include core();

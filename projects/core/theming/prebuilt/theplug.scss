@@ -1,10 +1,39 @@
 $palette: (
   primary: #E30000,
-  primary-light: rgba(227,0,0,0.1), // use chroma.js
+  primary-light: rgba(227, 0, 0, 0.1), // use chroma.js
   primary-dark: #141414,
-
   secondary: #747d89,
   secondary-light: #dfe4ee,
   secondary-lighter: #f5f7fa,
   secondary-dark: #38404e,
+
+  success: var(--color-green),
+  error: var(--color-red),
 );
+
+$font: (
+  primary: "'Montserrat', sans-serif",
+  secondary: "'Lato', sans-serif",
+);
+
+@mixin setup-fonts() {
+  @font-face {
+    font-family: 'Montserrat';
+    src: url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.woff2) format('woff2'),
+    url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.woff) format('woff'),
+    url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.woff2) format('woff2'),
+    url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.woff) format('woff'),
+    url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+
+@include setup-fonts();
